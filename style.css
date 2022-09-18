@@ -20,6 +20,35 @@ body * /*Mais uma vez utilizando o "*" para referenciar todos os "filhos" do ele
 }
 /* "*" é um seletor universal, então quando faço referência a esse elemento, estou referenciando todos os "filhos" de main, através do uso do seletor universal "*" */
 
+header
+{
+    margin-top: 32px;
+    /* text-align: center; 
+    Esta propriedade consegue manipular todos os elementos que são identificados como texto, inclusive img */
+
+}
+.head-content
+{
+    width: 120px;
+    margin: auto;
+    background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50.52%, #E2D45C 100%);
+    border-radius: 50%;
+    display: flex;
+    padding: 4px;
+    transition: transform .3s;
+    /* Essa propriedade cria um "movimento suave", ou seja, de transição para o elemento, de tal forma que foram passados como parâmetros o "evento" para que a transição ocorra e o tempo da "animação". Nesse caso o evento em questão é o hover, descrito no elemento referenciado abaixo. */
+}
+.head-content:hover
+{
+    transform: scale(1.1);
+    /* Essa propriedade define que ao passar o mouse sobre o elemento em questão, sua escala irá aumentar em 10% */
+}
+.head-content img 
+{
+    width: 100%;
+    height: 120px;
+    border-radius: 50%;
+}
 main
 {
     width: 90%;
@@ -31,6 +60,7 @@ main
     /* Basicamente estas últimas 3 propriedades são uma forma de organizar os elementos dentro do "main" em uma lista de linhas, o que define a linha na vertial é a propriedade "flex-direction" e o "gap" define o espaço entre eles */
     /* display: grid; teria o mesmo efeito que as 3 propriedades acima */
     margin-top: 32px;
+    margin-bottom: 32px;
 }
 section
 {
@@ -38,7 +68,8 @@ section
     background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50.52%, #E2D45C 100%);
     /* Este atributo, utilizando a função "linear-gradient", permite criar um efeito de "borda degradê", onde o primeiro parâmetro é a faixa de variação e os parâmetros subsequentes devem corresponder a cor que deve ser exibida e a "faixa de exibição" */
     border-radius: 10px;
-    padding-top: 4px;
+    padding-top: 4px; 
+    /* Esta propriedade foi adicionada para realizer o efeito de borda degradê, uma vez que ao definir um "padding top" o conteúdo dentre desta section será exibidos 4px abaixo*/
 }
 section div
 {
@@ -65,6 +96,15 @@ section ul
     flex-wrap: wrap; 
     /* Este atributo define um "limite" para a quantidade de itens que podem ficar numa mesma linha, de tal modo que ao atingir esse limite, o próximo elemento será "enviado" para a linha de baixo */
 }
+section ul li
+{
+    transition: transform .3s;
+    
+}
+section ul li:hover 
+{
+    transform: scale(1.1);
+}
 .game-list img
 {
     border-radius: 8px; /* arredondamento da borda */
@@ -79,4 +119,82 @@ section ul
 {
     width: 70px;
     border-radius: 999px;
+    border: 1px solid #443E54;
 }
+
+/* animation */
+
+.head-content 
+{
+    animation: from-top .7s;
+    /* Uma animação exige pelo menos o nome da keyframe que será executada e o tempo de duração da mesma */
+}
+main section:nth-child(odd)
+{
+    animation: from-left .7s backwards;
+    /* O backwards faz com que os elementos referenciados "tragam" as propriedades definidas na keyframe escolhida.*/
+    /* Para essa função, serão selecionados apenas os "filhos" de section que tiverem  */
+}
+main section:nth-child(even)
+{
+    animation: from-right .7s backwards;
+}
+main section:nth-child(1)
+{
+    animation-delay: 0;
+}
+main section:nth-child(2)
+{
+    animation-delay: .4s;
+}
+main section:nth-child(3)
+{
+    animation-delay: .7s;
+}
+main section:nth-child(4)
+{
+    animation-delay: .9s;
+}
+
+@keyframes from-top 
+{
+    /* A princípio, essa "função de animação" irá realizar uma "tarefa" de "from" até "to", ou seja, "passar disso para isso" */
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        /* Detalhe importante: a posição atual de um elemento é definida por 0 */
+    }
+}
+
+@keyframes from-left 
+{
+    from {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+        /* Detalhe importante: a posição atual de um elemento é definida por 0 */
+    }
+}
+@keyframes from-right 
+{
+    from {
+        opacity: 0;
+        transform: translateX(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+        /* Detalhe importante: a posição atual de um elemento é definida por 0 */
+    }
+}
+
