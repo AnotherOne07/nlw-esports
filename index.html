@@ -1,85 +1,191 @@
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;900&display=swap" rel="stylesheet">
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.5" />
+    <link rel="shortcut icon" href="/assets/controle-de-video-game.png" type="image/png">
     <title>E-sports NLW</title>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
+    <!-- Primeiro elemento da página, onde ficará a foto de perfil
     <header>
         <div class="head-content">
             <img src="https://avatars.githubusercontent.com/u/93009549?v=4" alt="foto de perfil do estudante Francisco Almir" class="icon-profile">
         </div>
-    </header>
-    <main class="container">
+    </header>-->
+    <main class="container"><!--"Corpo" da página, onde ficará os elementos principais-->
         <section>
-            <div class="game-list">
+            <div>
                 <h2>Meus jogos</h2>
-                <p></p>
-                <ul>
-                    <li>
-                        <a href="">
-                            <img src="https://static-cdn.jtvnw.net/ttv-boxart/512953_IGDB-285x380.jpg" alt="Imagem da capa do jogo">
+                <p>Meus jogos preferidos</p>
+                <ul class="game-list"><!--A classe "game-list" foi deixada no "pai" da lista pois fica mais específico, o que facilita para quando for atribuir um código css-->
+                    <li><!--Deixar os atributos em linhas deixa mais prático a visualização e edição se necessária, desses atributos-->
+                        <a 
+                        href="https://www.twitch.tv/directory/game/Elden%20Ring" 
+                        target="_blank">
+                            <img src="https://static-cdn.jtvnw.net/ttv-boxart/512953_IGDB-285x380.jpg" alt="Imagem da capa do jogo Elden Ring">
                         </a>
                     </li>
                     <li>
-                        <li>
-                            <a href="">
-                                <img src="https://static-cdn.jtvnw.net/ttv-boxart/21779-285x380.jpg" alt="Imagem da capa do jogo">
-                            </a>
-                    </li>
-                    <li>
-                        <li>
-                            <a href="">
-                                <img src="https://static-cdn.jtvnw.net/ttv-boxart/6369_IGDB-285x380.jpg" alt="Imagem da capa do jogo">
-                            </a>
-                    </li>
-                    <li>
-                        <li>
-                            <a href="">
-                                <img src="https://static-cdn.jtvnw.net/ttv-boxart/489635-285x380.jpg" alt="Imagem da capa do jogo">
-                            </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <img src="https://static-cdn.jtvnw.net/ttv-boxart/511195_IGDB-285x380.jpg" alt="Imagem da capa do jogo">
+                        <a 
+                        href="https://www.twitch.tv/directory/game/League%20of%20Legends" 
+                        target="_blank"> 
+                            <img src="https://static-cdn.jtvnw.net/ttv-boxart/21779-285x380.jpg" alt="Imagem da capa do jogo League of Legends">
                         </a>
+                    </li>
+                    <li>
+                        <a 
+                        href="https://www.twitch.tv/directory/game/God%20of%20War" 
+                        target="_blank">
+                            <img src="https://static-cdn.jtvnw.net/ttv-boxart/6369_IGDB-285x380.jpg" alt="Imagem da capa do jogo God of War">
+                        </a>
+                    </li>
+                    <li>
+                        <a 
+                        href="https://www.twitch.tv/directory/game/Ark%3A%20Survival%20Evolved" 
+                        target="_blank">
+                            <img src="https://static-cdn.jtvnw.net/ttv-boxart/489635-285x380.jpg" alt="Imagem da capa do jogo Ark Survival Evolved">
+                        </a>
+                    </li>
+                    <li>
+                        <a 
+                        href="https://www.twitch.tv/directory/game/Dragon%20Ball%20Z%3A%20Kakarot" 
+                        target="_blank">
+                            <img src="https://static-cdn.jtvnw.net/ttv-boxart/511195_IGDB-285x380.jpg" alt="Imagem da capa do jogo DragonBall Z Kakarot">
+                        </a>
+                    </li>
                 </ul>
             </div>
         </section>
         <section>
-            <div class="stream-list">
-                <h2></h2>
-                <p></p>
-                <ul>
+            <div>
+                <h2>Melhores animes</h2>
+                <p>Meus animes preferidos</p>
+                <ul class="animes-list">
                     <li>
-                        <a href="">
-                            <img src="https://static-cdn.jtvnw.net/jtv_user_pictures/b4176f26-b1f7-40a9-a06a-8818a90b4a34-profile_image-70x70.png" alt="">
+                        <a 
+                        href="https://www.crunchyroll.com/one-piece" 
+                        target="_blank">
+                            <img src="https://img1.ak.crunchyroll.com/i/spire4/8056a82e973dde98ebb82abd39dc69731564519729_full.jpg" alt="">
                         </a>
                     </li>
                     <li>
-                        <a href="">
-                            <img src="https://static-cdn.jtvnw.net/jtv_user_pictures/4af44e73-553f-4018-93ba-031aba498356-profile_image-70x70.png" alt="">
+                        <a 
+                        href="https://www.crunchyroll.com/dragon-ball-z" 
+                        target="_blank">
+                            <img src="https://img1.ak.crunchyroll.com/i/spire2/ab001b1cb053ec0d7b1b47b0f7bf98e71647329181_full.jpg" alt="">
                         </a>
                     </li>
                     <li>
-                        <a href="">
-                            <img src="https://static-cdn.jtvnw.net/jtv_user_pictures/c74f4028-26ef-42f4-9237-436b16e9b97f-profile_image-70x70.png" alt="">
+                        <a 
+                        href="https://www.crunchyroll.com/code-geass" 
+                        target="_blank">
+                            <img src="https://img1.ak.crunchyroll.com/i/spire1/64d502610c066e0424c248f8d1064a4f1617401090_full.jpg" alt="">
                         </a>
                     </li>
-                    <li></li>
+                    <li>
+                        <a href="https://www.crunchyroll.com/haikyu" 
+                        target="_blank">
+                            <img src="https://img1.ak.crunchyroll.com/i/spire4/a9c1f36167964b81371db1bde94087861580166621_full.jpg" alt="">
+                        </a>
+                    </li>
                 </ul>
             </div>
         </section>
         <section>
-            <div class="social-space">
-                <h2></h2>
-                <p></p>
-                <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
+            <div>
+                <h2>Melhores streams</h2>
+                <p>Lista das melhores streams da Twitch</p>
+                <ul class="stream-list">
+                    <li>
+                        <a 
+                        href="https://www.twitch.tv/majinshiro" 
+                        target="_blank"> 
+                            <img src="https://static-cdn.jtvnw.net/jtv_user_pictures/b4176f26-b1f7-40a9-a06a-8818a90b4a34-profile_image-150x150.png" alt="Foto de perfil do canal da twitch">
+                        </a>
+                    </li>
+                    <li>
+                        <a 
+                        href="https://www.twitch.tv/santino_br" 
+                        target="_blank">
+                            <img src="https://static-cdn.jtvnw.net/jtv_user_pictures/4af44e73-553f-4018-93ba-031aba498356-profile_image-150x150.png" alt="Foto de perfil do canal da twitch">
+                        </a>
+                    </li>
+                    <li>
+                        <a 
+                        href="https://www.twitch.tv/djoko" 
+                        target="_blank">
+                            <img src="https://static-cdn.jtvnw.net/jtv_user_pictures/c74f4028-26ef-42f4-9237-436b16e9b97f-profile_image-150x150.png" alt="Foto de perfil do canal da twitch">
+                        </a>
+                    </li>
+                    <li>
+                        <a 
+                        href="https://www.twitch.tv/akemy_sama" 
+                        target="_blank">
+                            <img src="https://static-cdn.jtvnw.net/jtv_user_pictures/40c5399f-bb6d-415b-a825-94239313d7e8-profile_image-150x150.png" alt="Foto de perfil do canal da twitch">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section>
+            <div>
+                <h2>Redes sociais</h2>
+                <p>Se sentindo perdido? Precisando de ajuda ? Fale comigo!</p>
+                <ul class="social-medias" >
+                    <li>
+                        <a href="http://" target="_blank">
+                            <img src="https://img.icons8.com/nolan/344/linkedin-circled.png" alt="Ícone linkedin" style="height: 32px;width: 32px;">
+                        </a>
+                    </li>
+                    <li>
+                        <a 
+                        href="https://twitter.com/MyJunior07"
+                        target="_blank">
+                            <svg 
+                            width="32" 
+                            height="32" 
+                            viewBox="0 0 32 32" 
+                            fill="none" 
+                            xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16 11C16 8.25003 18.3125 5.96253 21.0625 6.00003C22.0256 6.01115 22.9649 6.30018 23.7676 6.83237C24.5704 7.36457 25.2023 8.11728 25.5875 9.00003H30L25.9625 13.0375C25.7019 17.0932 23.9066 20.8975 20.9415 23.6769C17.9764 26.4562 14.0641 28.002 10 28C6 28 5 26.5 5 26.5C5 26.5 9 25 11 22C11 22 3 18 5 7.00003C5 7.00003 10 12 16 13V11Z" stroke="#2871FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/_lelouch_7/"
+                        target="_blank">
+                            <svg 
+                            width="32" 
+                            height="32" 
+                            viewBox="0 0 32 32" 
+                            fill="none" 
+                            xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16 21C18.7614 21 21 18.7614 21 16C21 13.2386 18.7614 11 16 11C13.2386 11 11 13.2386 11 16C11 18.7614 13.2386 21 16 21Z" stroke="#FA41FE" stroke-width="2" stroke-miterlimit="10"/>
+                                <path d="M21.5 4.5H10.5C7.18629 4.5 4.5 7.18629 4.5 10.5V21.5C4.5 24.8137 7.18629 27.5 10.5 27.5H21.5C24.8137 27.5 27.5 24.8137 27.5 21.5V10.5C27.5 7.18629 24.8137 4.5 21.5 4.5Z" stroke="#FA41FE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M22.5 11C23.3284 11 24 10.3284 24 9.5C24 8.67157 23.3284 8 22.5 8C21.6716 8 21 8.67157 21 9.5C21 10.3284 21.6716 11 22.5 11Z" fill="#FA41FE"/>
+                            </svg>
+                            
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/channel/UCwPPWuztp-gcc0illmlVJ_Q" 
+                        target="_blank">
+                            <svg 
+                            width="32" 
+                            height="32" 
+                            viewBox="0 0 32 32" 
+                            fill="none" 
+                            xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20 16L14 12V20L20 16Z" stroke="#F40000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M3 16C3 19.725 3.3875 21.9 3.675 23.025C3.75427 23.3302 3.90418 23.6126 4.11262 23.8493C4.32106 24.0859 4.58221 24.2703 4.875 24.3875C9.0625 25.9875 16 25.95 16 25.95C16 25.95 22.9375 25.9875 27.125 24.3875C27.4178 24.2703 27.6789 24.0859 27.8874 23.8493C28.0958 23.6126 28.2457 23.3302 28.325 23.025C28.6125 21.9 29 19.725 29 16C29 12.275 28.6125 10.1 28.325 8.975C28.2457 8.66975 28.0958 8.38741 27.8874 8.15074C27.6789 7.91407 27.4178 7.7297 27.125 7.6125C22.9375 6.0125 16 6.05 16 6.05C16 6.05 9.0625 6.0125 4.875 7.6125C4.58221 7.7297 4.32106 7.91407 4.11262 8.15074C3.90418 8.38741 3.75427 8.66975 3.675 8.975C3.3875 10.1 3 12.275 3 16Z" stroke="#F40000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>  
+                        </a>
+                    </li>
                 </ul>
             </div>
         </section> 

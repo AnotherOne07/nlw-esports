@@ -1,0 +1,82 @@
+* /* Para fazer um "reset" de todas as propriedades pré definidas do html */
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*Este atributo altera a forma como as "caixas" do html ocupam o espaço na tela. Por padrão, onde por padrão os elementos tem suas medidas somadas ao "padding", ao utilizar esse atributo com esse valor o elemento referenciado sempre irá ocupar o máximo de width que foi definido no doc css, por exemplo*/
+}
+body
+{
+    background-image: url(./assets/bg.jpg);/*"Chamar" a imagem que será meu background */
+    background-position: top center;/* Ajustar a imagem do background para que fique no top e centralizada */
+    background-size: 100% auto;/* Ajustar para que a imagem do background ocupe 100% da tela atual. O parâmetro "auto" é referente ao "height" da imagem de fundo*/
+    background-repeat: no-repeat;/* Definir qual será a regra de repetição do background */
+    background-color: #121214;/* A cor escolhida é com base na cor final do degradê da imagem de background utilizada */
+}
+body * /*Mais uma vez utilizando o "*" para referenciar todos os "filhos" do elemento body */
+{
+    font-family: 'Inter', sans-serif;
+    line-height: 160%;
+    /* Dentro deste elemento estarão todos os atributos que devem ser comuns a todos os filhos do body*/
+}
+/* "*" é um seletor universal, então quando faço referência a esse elemento, estou referenciando todos os "filhos" de main, através do uso do seletor universal "*" */
+
+main
+{
+    width: 90%;
+    max-width: 580px; /*Definir qual o valor máximo que a largura do elemento deve assumir */
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    /* Basicamente estas últimas 3 propriedades são uma forma de organizar os elementos dentro do "main" em uma lista de linhas, o que define a linha na vertial é a propriedade "flex-direction" e o "gap" define o espaço entre eles */
+    /* display: grid; teria o mesmo efeito que as 3 propriedades acima */
+    margin-top: 32px;
+}
+section
+{
+    color: white;
+    background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50.52%, #E2D45C 100%);
+    /* Este atributo, utilizando a função "linear-gradient", permite criar um efeito de "borda degradê", onde o primeiro parâmetro é a faixa de variação e os parâmetros subsequentes devem corresponder a cor que deve ser exibida e a "faixa de exibição" */
+    border-radius: 10px;
+    padding-top: 4px;
+}
+section div
+{
+    background-color: #2A2634;
+    padding: 32px;
+    padding-top: 24px;
+    border-radius: 8px;
+}
+section h2
+{
+    letter-spacing: -0.47px;
+}
+section p
+{
+    letter-spacing: -0.18px;
+    color: #A1A1AA;
+}
+section ul
+{
+    list-style: none;
+    display: flex; /* Este elemento é responsável por definir como as "box" do html serão exibidas na tela. Nesse caso o valor "flex" define que os elementos da ul devem ficar TODOS lado a lado. Vale ressaltar que este atributo irá definir a apresentação de todos os "filhos" deste elemento */
+    gap: 16px; /* Este atributo só funciona pois já foi atribuído a essa lista, no atributo "display", o valor flex  */
+    margin-top: 24px;
+    flex-wrap: wrap; 
+    /* Este atributo define um "limite" para a quantidade de itens que podem ficar numa mesma linha, de tal modo que ao atingir esse limite, o próximo elemento será "enviado" para a linha de baixo */
+}
+.game-list img
+{
+    border-radius: 8px; /* arredondamento da borda */
+    width: 90px;
+}
+.animes-list img
+{
+    width: 90px;
+    border-radius: 8px;
+}
+.stream-list img
+{
+    width: 70px;
+    border-radius: 999px;
+}
